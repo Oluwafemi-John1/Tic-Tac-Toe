@@ -17,6 +17,12 @@
             text-align: center;
             font-size: xx-large;
         }
+        #row1 {
+            /* text-align: center; */
+            font-size: 20px;
+            font-weight: 600;
+            padding: 3px;
+        }
         @media screen and (max-width:450px) {
             body {
                 overflow-x: hidden;
@@ -30,7 +36,7 @@
 </head>
 <body class="ms-5 me-5">
     <h1 align="center" class="text-uppercase text-decoration-underline sticky-top bg-white">Tic Tac Toe</h1>
-    <h1>Participants</h1>
+    <!-- <h1>Participants</h1> -->
     <div class="row">
         <div class="col-lg-5 col-sm-12 my-2">
             <h3>First Player</h3>
@@ -41,7 +47,7 @@
             <input type="text" placeholder="Enter your name" class="form-control bg-light shadow-sm" id="player2">
         </div>
         <div>
-            <button type="button" class="btn btn-secondary" onclick="submit()">Submit</button>
+            <button type="button" class="btn btn-secondary" onclick="submit()">Play Now</button>
         </div>
     </div>
     <table border="1" class="border mt-3">
@@ -66,24 +72,26 @@
         <button type="button" class="btn btn-danger" onclick="rest()">Restart</button>
     </div>
     <div class="mt-2 col-12">
-        <p id="board"></p>
+        <p id="board" class="text-uppercase"></p>
     </div>
-    <div class="mt-3">
-        <strong>Score Board</strong>
-        <div class="d-flex border border-secondary">
-            <p class="col-6">Name</p>
-            <p class="col-3">ID</p>
-            <p class="col-3">Score</p>
-        </div>
-        <div class="d-flex border border-secondary">
-            <p class="col-6" id="name1"></p>
-            <p class="col-3 fs-2">X</p>
-            <p class="col-3" id="score1">0</p>
-        </div>
-        <div class="d-flex border border-secondary">
-            <p class="col-6" id="name2"></p>
-            <p class="col-3 fs-2">O</p>
-            <p class="col-3" id="score2">0</p>
+    <div class="mt-3 mb-3">
+        <h3>Score Board</h3>
+        <div class="border border-3 border-dark">
+            <div class="row px-3 text-center" id="row1">
+                <p class="col-5">Name</p>
+                <p class="col-3">ID</p>
+                <p class="col-3">Score</p>
+            </div>
+            <div class="row text-center">
+                <p class="col-5 fs-3" id="name1"></p>
+                <p class="col-3 fs-2 bg-light">X</p>
+                <p class="col-3 fs-2" id="score1">0</p>
+            </div>
+            <div class="row text-center">
+                <p class="col-5 fs-3" id="name2"></p>
+                <p class="col-3 fs-2 bg-light">O</p>
+                <p class="col-3 fs-2" id="score2">0</p>
+            </div>
         </div>
     </div>
 
