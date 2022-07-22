@@ -48,6 +48,7 @@ body {
 @media screen and (max-width:450px) {
     body {
         overflow-x: hidden;
+        font-family: cursive;
     }
     #table {
         height: 250px;
