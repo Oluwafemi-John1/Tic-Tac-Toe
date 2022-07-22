@@ -98,6 +98,7 @@ const cont = () => {
     c1.innerText = "";
     c2.innerText = "";
     c3.innerText = "";
+    winSong.pause()
 }
 
 const rest = () => {

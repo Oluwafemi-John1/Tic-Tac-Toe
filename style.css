@@ -2,7 +2,7 @@ body {
     background: url(images/360_F_290468474_6yJ9eBPW2wevarR9cbXN87TCFJDVVuAR.jpg);
     opacity: 0.9;
     background-size: cover;
-    font-family: 'Fredoka One', cursive;
+    font-family: 'Bree Serif', sans-serif;
 }
 #table {
     height: 380px;
@@ -48,7 +48,7 @@ body {
 @media screen and (max-width:450px) {
     body {
         overflow-x: hidden;
-        font-family: 'nexa';
+        /* font-family: 'nexa'; */
     }
     #table {
         height: 250px;
