@@ -18,14 +18,14 @@ const test=(e)=>{
             // Each boxes was assigned an id. Now, I will write an if statement to make sure when the possible moves align, we have a win. We will begin with all possible X win
             if ((a1.innerText === "X" && a2.innerText === "X" && a3.innerText === "X") || (a1.innerText === "X" && b1.innerText === "X" && c1.innerText === "X") || (a1.innerText === "X" && b2.innerText === "X" && c3.innerText === "X") || (a2.innerText === "X" && b2.innerText === "X" && c2.innerText === "X") || (a3.innerText === "X" && b3.innerText === "X" && c3.innerText === "X") || (a3.innerText === "X" && b2.innerText === "X" && c1.innerText === "X") || (b1.innerText === "X" && b2.innerText === "X" && b3.innerText === "X") || (c1.innerText === "X" && c2.innerText === "X" && c3.innerText === "X")) {
                 initialValue = ""
-                board.innerText = name1.innerText + " wins!"
+                board.innerText = name1.innerText + " wins😀!"
                 // To increment the score of X
                 sc1 = sc1 + 1;
                 score1.innerText = sc1;
                 return;
                 // To now check for when a draw may happen, that is when the conditions for an X win is not met. We do this
             } else if (a1.innerText != "" && a2.innerText != "" && a3.innerText != "" && b1.innerText != "" && b2.innerText != "" && b3.innerText != "" && c1.innerText != "" && c2.innerText != "" && c3.innerText != "") {
-                board.innerText = "Stalemate!"
+                board.innerText = "Stalemate🙂!"
             }
         }
         // Having for checked for X win and stalemate, we now check for O win
@@ -34,20 +34,22 @@ const test=(e)=>{
             initialValue = "X";
             if ((a1.innerText === "O" && a2.innerText === "O" && a3.innerText === "O") || (a1.innerText === "O" && b1.innerText === "O" && c1.innerText === "O") || (a1.innerText === "O" && b2.innerText === "O" && c3.innerText === "O") || (a2.innerText === "O" && b2.innerText === "O" && c2.innerText === "O") || (a3.innerText === "O" && b3.innerText === "O" && c3.innerText === "O") || (a3.innerText === "O" && b2.innerText === "O" && c1.innerText === "O") || (b1.innerText === "O" && b2.innerText === "O" && b3.innerText === "O") || (c1.innerText === "O" && c2.innerText === "O" && c3.innerText === "O")) {
                 initialValue = ""
-                board.innerText = name2.innerText + " wins!"
+                board.innerText = name2.innerText + " wins😀!"
                 // To increment the score of O
                 sc2 = sc2 + 1;
                 score2.innerText = sc2
                 return;
                 // To now check for when a draw may happen, that is when the conditions for an X win is not met. We do this
             } else if (a1.innerText != "" && a2.innerText != "" && a3.innerText != "" && b1.innerText != "" && b2.innerText != "" && b3.innerText != "" && c1.innerText != "" && c2.innerText != "" && c3.innerText != "") {
-                board.innerText = "Stalemate!"
+                board.innerText = "Stalemate🙂!"
             }
         }
     } else {
         // alert("Enter names")
         // showError.innerText = "Register Participants!"
         showError.innerText = "Please register players name before playing"
+        player1.className = "form-control border border-2 border-danger"
+        player2.className = "form-control border border-2 border-danger"
     }
     
    
@@ -69,11 +71,6 @@ const submit = () =>{
         player1 = ""
         player2 = ""
         showError.innerText = ""
-    }
-
-    if(player1.value != "") {
-        showError.innerText = "Please register both players name"
-        return;
     }
 }
 
