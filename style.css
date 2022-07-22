@@ -16,6 +16,22 @@ body {
     text-align: center;
     font-size: 70px;
     border-radius: 20px;
+    
+}
+.border-danger {
+    background: -webkit-linear-gradient(#1919eb, #1919eb, #03c003, #02a102);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.border-primary {
+    background: -webkit-linear-gradient(#E61919, #eb0000, #03c003, #02a102);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.border-success {
+    background: -webkit-linear-gradient(#E61919, #eb0000, #1919eb, #1919eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 #table .tr .td:hover {
     height: 122;
@@ -43,6 +59,7 @@ body {
 #row1 {
     border-bottom: 2px solid black;
 }
+
 @media screen and (max-width:450px) {
     body {
         overflow-x: hidden;
