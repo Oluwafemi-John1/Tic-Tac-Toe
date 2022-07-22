@@ -2,6 +2,7 @@ let initialValue = "X";
 // We parse the values from our score board as integers so that the scores can be added up
 let sc1 = parseInt(score1.innerText);
 let sc2 = parseInt(score2.innerText);
+let winSong = new Audio ("audio/mixkit-ending-show-audience-clapping-478.wav");
 
 const test=(e)=>{
     // console.log(e);
@@ -19,6 +20,7 @@ const test=(e)=>{
             if ((a1.innerText === "X" && a2.innerText === "X" && a3.innerText === "X") || (a1.innerText === "X" && b1.innerText === "X" && c1.innerText === "X") || (a1.innerText === "X" && b2.innerText === "X" && c3.innerText === "X") || (a2.innerText === "X" && b2.innerText === "X" && c2.innerText === "X") || (a3.innerText === "X" && b3.innerText === "X" && c3.innerText === "X") || (a3.innerText === "X" && b2.innerText === "X" && c1.innerText === "X") || (b1.innerText === "X" && b2.innerText === "X" && b3.innerText === "X") || (c1.innerText === "X" && c2.innerText === "X" && c3.innerText === "X")) {
                 initialValue = ""
                 board.innerText = name1.innerText + " wins😀!"
+                winSong.play()
                 // To increment the score of X
                 sc1 = sc1 + 1;
                 score1.innerText = sc1;
@@ -35,7 +37,7 @@ const test=(e)=>{
             if ((a1.innerText === "O" && a2.innerText === "O" && a3.innerText === "O") || (a1.innerText === "O" && b1.innerText === "O" && c1.innerText === "O") || (a1.innerText === "O" && b2.innerText === "O" && c3.innerText === "O") || (a2.innerText === "O" && b2.innerText === "O" && c2.innerText === "O") || (a3.innerText === "O" && b3.innerText === "O" && c3.innerText === "O") || (a3.innerText === "O" && b2.innerText === "O" && c1.innerText === "O") || (b1.innerText === "O" && b2.innerText === "O" && b3.innerText === "O") || (c1.innerText === "O" && c2.innerText === "O" && c3.innerText === "O")) {
                 initialValue = ""
                 board.innerText = name2.innerText + " wins😀!"
-                
+                winSong.play()
                 // To increment the score of O
                 sc2 = sc2 + 1;
                 score2.innerText = sc2
@@ -63,13 +65,19 @@ const submit = () =>{
     if(player1.value == "" && player2.value == ""){
         // alert("Register Participants!")
         showError.innerText = "Please register players name before submitting"
+    }else if (player1.value = ""){
         player1.className = "form-control border border-2 border-danger"
+        return;
+    } else if (player2.value = "") {
         player2.className = "form-control border border-2 border-danger"
-    } else{
+        return;
+    }
+     else{
         name1.innerText = firstPlayer;
         name2.innerText = secondPlayer;
         player1 = ""
         player2 = ""
+        return;
         showError.innerText = ""
     }
 }
