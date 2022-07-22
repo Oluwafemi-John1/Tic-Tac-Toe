@@ -25,9 +25,11 @@ const test=(e)=>{
                 sc1 = sc1 + 1;
                 score1.innerText = sc1;
                 return;
+                initialValue = "X"
                 // To now check for when a draw may happen, that is when the conditions for an X win is not met. We do this
             } else if (a1.innerText != "" && a2.innerText != "" && a3.innerText != "" && b1.innerText != "" && b2.innerText != "" && b3.innerText != "" && c1.innerText != "" && c2.innerText != "" && c3.innerText != "") {
                 board.innerText = "Stalemate🙂!"
+                return;
             }
         }
         // Having for checked for X win and stalemate, we now check for O win
@@ -41,10 +43,12 @@ const test=(e)=>{
                 // To increment the score of O
                 sc2 = sc2 + 1;
                 score2.innerText = sc2
+                initialValue = "O"
                 return;
                 // To now check for when a draw may happen, that is when the conditions for an X win is not met. We do this
             } else if (a1.innerText != "" && a2.innerText != "" && a3.innerText != "" && b1.innerText != "" && b2.innerText != "" && b3.innerText != "" && c1.innerText != "" && c2.innerText != "" && c3.innerText != "") {
                 board.innerText = "Stalemate🙂!"
+                return;
             }
         }
     } else {
@@ -78,7 +82,7 @@ const submit = () =>{
         player1 = ""
         player2 = ""
         return;
-        showError.innerText = ""
+        showError.innerText = "Register"
     }
 }
 
