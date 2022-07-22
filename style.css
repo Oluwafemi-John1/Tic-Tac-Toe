@@ -16,8 +16,6 @@ body {
     text-align: center;
     font-size: 70px;
     border-radius: 20px;
-    font-family: 'Permanent Marker', cursive;
-    /* transform: rotate(0deg); */
 }
 #table .tr .td:hover {
     height: 122;
