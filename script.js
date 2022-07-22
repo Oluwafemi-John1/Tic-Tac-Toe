@@ -35,6 +35,7 @@ const test=(e)=>{
             if ((a1.innerText === "O" && a2.innerText === "O" && a3.innerText === "O") || (a1.innerText === "O" && b1.innerText === "O" && c1.innerText === "O") || (a1.innerText === "O" && b2.innerText === "O" && c3.innerText === "O") || (a2.innerText === "O" && b2.innerText === "O" && c2.innerText === "O") || (a3.innerText === "O" && b3.innerText === "O" && c3.innerText === "O") || (a3.innerText === "O" && b2.innerText === "O" && c1.innerText === "O") || (b1.innerText === "O" && b2.innerText === "O" && b3.innerText === "O") || (c1.innerText === "O" && c2.innerText === "O" && c3.innerText === "O")) {
                 initialValue = ""
                 board.innerText = name2.innerText + " wins😀!"
+                
                 // To increment the score of O
                 sc2 = sc2 + 1;
                 score2.innerText = sc2
@@ -67,7 +68,6 @@ const submit = () =>{
     } else{
         name1.innerText = firstPlayer;
         name2.innerText = secondPlayer;
-        // img.style.display = "none";
         player1 = ""
         player2 = ""
         showError.innerText = ""

@@ -10,6 +10,7 @@
             background: url(images/360_F_290468474_6yJ9eBPW2wevarR9cbXN87TCFJDVVuAR.jpg);
             opacity: 0.9;
             background-size: cover;
+            font-family: 'Fredoka One', cursive;
         }
         #table {
             height: 380px;
@@ -23,9 +24,21 @@
             text-align: center;
             font-size: 70px;
             border-radius: 20px;
-            background-image: url(images/360_F_290468474_6yJ9eBPW2wevarR9cbXN87TCFJDVVuAR.jpg);
-            background-size: contain;
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family: 'Permanent Marker', cursive;
+            /* transform: rotate(0deg); */
+        }
+        #table .tr .td:hover {
+            height: 122;
+            width: 122;
+        }
+        .border-danger:hover{
+            box-shadow: 0 0px 5px  #E61919,  0 0px 5px  #E61919, 0 0px 5px  #E61919;
+        }
+        .border-primary:hover{
+            box-shadow: 0 0px 5px  #1919eb,  0 0px 5px  #1919eb, 0 0px 5px  #1919eb;
+        }
+        .border-success:hover{
+            box-shadow: 0 0px 5px  #69c069,  0 0px 5px  #69c069, 0 0px 5px  #69c069;
         }
         .tr {
             padding: 3px;
@@ -37,6 +50,9 @@
             font-weight: 600;
             padding: 3px;
         }
+        #row1 {
+            border-bottom: 2px solid black;
+        }
         @media screen and (max-width:450px) {
             body {
                 overflow-x: hidden;
@@ -47,8 +63,13 @@
             }
             .td {
                 height: 80;
+                width: 80;
                 font-size: 50px;
             }
+            #table .tr .td:hover {
+            height: 83;
+            width: 83;
+        }
         }
     </style>
 </head>
@@ -66,51 +87,51 @@
         </div>
         <div>
             <button type="button" class="btn btn-secondary" onclick="submit()">Play Now</button>
-            <button type="button" class="btn btn-secondary" onclick="rest()">Refresh</button>
+            <button type="button" class="btn btn-secondary" onclick="rest()">Click to Refresh</button>
             <p id="showError" class="fs-4 fw-bold text-danger"></p>
         </div>
     </div>
     <div class="mt-3 mx-auto" id="table">
         <div class="border-2 d-flex gap-2 tr" align="center">
-            <div onclick="test(event)" id="a1" class="border border-dark bg-light td"></div>
-            <div onclick="test(event)" id="a2" class="border border-dark td"></div>
-            <div onclick="test(event)" id="a3" class="border border-dark bg-light td"></div>
+            <div onclick="test(event)" id="a1" class="border border-danger bg-light td"></div>
+            <div onclick="test(event)" id="a2" class="border border-success td"></div>
+            <div onclick="test(event)" id="a3" class="border border-primary bg-light td"></div>
         </div>
         <div class="border-2 d-flex gap-2 tr">
-            <div onclick="test(event)" id="b1" class="border border-dark td"></div>
-            <div onclick="test(event)" id="b2" class="border border-dark bg-light td"></div>
-            <div onclick="test(event)" id="b3" class="border border-dark td"></div>
+            <div onclick="test(event)" id="b1" class="border border-success td"></div>
+            <div onclick="test(event)" id="b2" class="border border-primary bg-light td"></div>
+            <div onclick="test(event)" id="b3" class="border border-danger td"></div>
         </div>
         <div class="border-2 d-flex gap-2 tr">
-            <div onclick="test(event)" id="c1" class="border border-dark bg-light td"></div>
-            <div onclick="test(event)" id="c2" class="border border-dark td"></div>
-            <div onclick="test(event)" id="c3" class="border border-dark bg-light td"></div>
+            <div onclick="test(event)" id="c1" class="border border-primary bg-light td"></div>
+            <div onclick="test(event)" id="c2" class="border border-danger td"></div>
+            <div onclick="test(event)" id="c3" class="border border-success bg-light td"></div>
         </div>
         <div class="mt-1 mx-auto">
             <button type="button" class="btn btn-success" onclick="cont()">Continue</button>
             <button type="button" class="btn btn-danger" onclick="rest()">Restart</button>
         </div>
     </div>
-    <div class="mt-5 col-12 fs-3 fw-bold">
+    <div class="mt-5 col-12 fs-2 fw-bold">
         <marquee behavior="" direction=""><p id="board" class="text-uppercase"></p></marquee>
     </div>
     <div class="mt-3 mb-3 py-3">
-        <h3>Score Board</h3>
-        <div class="border border-3 border-dark rounded">
+        <h3 class="text-decoration-underline fw-bold">Score Board</h3>
+        <div class="border border-3 border-dark border-bottom rounded px-3">
             <div class="row px-3 text-center" id="row1">
-                <p class="col-5">Name</p>
-                <p class="col-3">ID</p>
-                <p class="col-3">Score</p>
+                <p class="col-5 mt-2">Name</p>
+                <p class="col-3 mt-2">ID</p>
+                <p class="col-3 mt-2">Score</p>
             </div>
             <div class="row text-center">
                 <p class="col-5 fs-3" id="name1"></p>
                 <p class="col-3 fs-2 fw-bold bg-light">X</p>
-                <p class="col-3 fs-2" id="score1">0</p>
+                <p class="col-3 fs-1 fw-bold" id="score1">0</p>
             </div>
             <div class="row text-center">
                 <p class="col-5 fs-3" id="name2"></p>
                 <p class="col-3 fs-2 fw-bold bg-light">O</p>
-                <p class="col-3 fs-2" id="score2">0</p>
+                <p class="col-3 fs-1 fw-bold" id="score2">0</p>
             </div>
         </div>
     </div>
