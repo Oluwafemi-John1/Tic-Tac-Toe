@@ -61,7 +61,7 @@ body {
     border-bottom: 2px solid black;
 }
 
-@media screen and (max-width:470px) {
+@media screen and (max-width:991px) {
     body {
         overflow-x: hidden;
         /* font-family: 'nexa'; */
