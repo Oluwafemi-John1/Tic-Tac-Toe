@@ -3,6 +3,7 @@ let initialValue = "X";
 let sc1 = parseInt(score1.innerText);
 let sc2 = parseInt(score2.innerText);
 let winSong = new Audio ("audio/mixkit-ending-show-audience-clapping-478.wav");
+let drawSong = new Audio ("audio/funny-sound-effect-for-quotjack-in-the-boxquot-sound-ver2-110924.mp3")
 
 const test=(e)=>{
     // console.log(e);
@@ -29,6 +30,7 @@ const test=(e)=>{
                 // To now check for when a draw may happen, that is when the conditions for an X win is not met. We do this
             } else if (a1.innerText != "" && a2.innerText != "" && a3.innerText != "" && b1.innerText != "" && b2.innerText != "" && b3.innerText != "" && c1.innerText != "" && c2.innerText != "" && c3.innerText != "") {
                 board.innerText = "Stalemate🙂!"
+                drawSong.play();
                 return;
             }
         }
@@ -48,6 +50,7 @@ const test=(e)=>{
                 // To now check for when a draw may happen, that is when the conditions for an X win is not met. We do this
             } else if (a1.innerText != "" && a2.innerText != "" && a3.innerText != "" && b1.innerText != "" && b2.innerText != "" && b3.innerText != "" && c1.innerText != "" && c2.innerText != "" && c3.innerText != "") {
                 board.innerText = "Stalemate🙂!"
+                drawSong.play();
                 return;
             }
         }
